@@ -274,6 +274,17 @@ nav a:hover {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+
+  transition: 0.25s ease;
+}
+
+.branding-box:hover {
+  transform: translateY(-6px);
 }
 
 .branding-box h2 {
