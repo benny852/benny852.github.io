@@ -352,16 +352,16 @@ nav a:hover {
 .product-grid {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .product-card {
-  width: 360px;
-  height: 480px;
+  width: 400px;
+  height: 540px;
 
-  /* Square */
-  border-radius: 0px;
+  /* Rounded corners */
+  border-radius: 10%;
 
   text-decoration: none;
   color: white;
@@ -382,7 +382,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0px;
+  border-radius: 10%;
   position: absolute;
   top: 0;
   left: 0;
