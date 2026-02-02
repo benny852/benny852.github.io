@@ -1,54 +1,103 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f9f9f9;
-  color: #222;
+  font-family: Arial, sans-serif;
+  background: #fdf9ef;
+  color: #003366;
+  text-align: center;
 }
 
 header {
-  text-align: center;
-  padding: 40px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  padding: 30px;
 }
 
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #0077cc;
+  font-weight: bold;
+  color: #0050c8;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px;
+.small-title {
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
-h2 {
-  margin-top: 50px;
+.hero-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  color: #0050c8;
+}
+
+.btn {
+  display: inline-block;
+  background: #0050c8;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.overview-grid,
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
+  width: 250px;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background: #0077cc;
-  color: white;
-  border-radius: 6px;
   text-decoration: none;
 }
 
-footer {
-  text-align: center;
+.blue {
+  background: #0050c8;
+  color: white;
+}
+
+.project-card {
+  border: 2px solid #0050c8;
+  border-radius: 20px;
   padding: 20px;
-  font-size: 14px;
-  color: gray;
+  width: 220px;
+  text-decoration: none;
+  color: #003366;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background: #4a2d2d;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
 }

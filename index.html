@@ -3,60 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ben Harrison | Portfolio</title>
+  <title>Ben Harrison | Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Ben Harrison</h1>
-    <p>Mechanical & Mechatronics Engineering Student</p>
+<header>
+  <p class="small-title">ENGINEERING PORTFOLIO</p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Who Am I</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm Ben, a final-year Mechatronics Engineering student with experience in
-        robotics, embedded systems, and mechanical design.
-      </p>
-    </section>
+<section class="hero">
 
-    <section>
-      <h2>Featured Projects</h2>
+  <div class="hero-content">
 
-      <div class="card">
-        <h3>ROS2 Ackermann Controller</h3>
-        <p>Autonomous steering control system for a robotic vehicle using ROS2.</p>
+    <div class="hero-text">
+      <h1>BEN<br>HARRISON</h1>
+
+      <div class="hero-buttons">
+        <a href="about.html" class="btn">WHO AM I</a>
+        <a href="projects.html" class="btn">OVERVIEW</a>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>Quadcopter Control System</h3>
-        <p>Flight dynamics modelling + embedded controller integration.</p>
-      </div>
+    <div class="hero-image">
+      <img src="assets/images/profile-picture.png" alt="Profile Photo">
+    </div>
 
-      <a class="button" href="projects.html">See All Projects →</a>
-    </section>
+  </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: benharrison1001@gmail.com</p>
-      <p>
-        <a href="https://linkedin.com">LinkedIn</a> |
-        <a href="https://github.com">GitHub</a>
-      </p>
-    </section>
-  </main>
+</section>
 
-  <footer>
-    <p>© 2026 Ben Harrison</p>
-  </footer>
+<section class="overview">
+  <h2>OVERVIEW</h2>
+
+  <div class="overview-grid">
+
+    <a href="about.html" class="card blue">
+      <h3>WHO AM I</h3>
+      <p>Get to know me and my vision!</p>
+    </a>
+
+    <a href="projects.html" class="card blue">
+      <h3>PROJECTS</h3>
+      <p>Some of the cool work I’ve done recently.</p>
+    </a>
+
+    <a href="resume.html" class="card blue">
+      <h3>RESUME</h3>
+      <p>For hiring managers!</p>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ben Harrison</p>
+</footer>
 
 </body>
 </html>
