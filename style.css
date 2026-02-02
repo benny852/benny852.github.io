@@ -37,7 +37,7 @@ nav a:hover {
 .page-title {
   font-size: 80px;
   font-weight: 900;
-  color: #0050c8;
+  color: #1b5e3f;
   margin: 40px 0 20px 0;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -357,11 +357,11 @@ nav a:hover {
 }
 
 .product-card {
-  width: 400px;
-  height: 540px;
+  width: 500px;
+  height: 675px;
 
   /* Rounded corners */
-  border-radius: 10%;
+  border-radius: 25%;
 
   text-decoration: none;
   color: white;
@@ -382,7 +382,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 25%;
   position: absolute;
   top: 0;
   left: 0;
