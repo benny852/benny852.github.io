@@ -357,8 +357,8 @@ nav a:hover {
 }
 
 .product-card {
-  width: 600px;
-  height: 810px;
+  width: 500px;
+  height: 675px;
 
   /* Rounded corners */
   border-radius: 25%;
