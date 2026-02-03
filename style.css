@@ -103,7 +103,7 @@ nav a:hover {
 /* ============================= */
 
 .bengineerings-hero {
-  padding: 80px 10% 20px 10%;
+  padding: 30px 10% 15px 10%;
   background: #fdf9ef;
 }
 
@@ -111,6 +111,12 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bengineerings-logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
 }
 
 .bengineerings-title h1 {
@@ -126,7 +132,7 @@ nav a:hover {
 }
 
 .bengineerings-cards {
-  padding: 20px 10% 80px 10%;
+  padding: 15px 10% 30px 10%;
 }
 
 .hub-grid {
