@@ -351,12 +351,12 @@ nav a:hover {
 .product-grid {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 2px;
   flex-wrap: nowrap;
 }
 
 .product-card {
-  width: 22%;
+  width: 24.5%;
   height: auto;
   aspect-ratio: 4 / 5.4;
 
