@@ -6,8 +6,17 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fdf9ef;
-  color: #003366;
+  color: #062e1f;
   text-align: center;
+}
+
+:root {
+  --bg-cream: #fdf9ef;
+  --cream-muted: #f3f4ee;
+  --primary: #0b3a2a; /* dark green for buttons/primary accents */
+  --accent: #1b5e3f;  /* slightly lighter green */
+  --text: #062e1f;    /* main body text */
+  --muted-border: #cfd8d1;
 }
 
 section {
@@ -22,7 +31,7 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  color: #0050c8;
+  color: var(--accent);
 }
 
 nav a:hover {
@@ -37,7 +46,7 @@ nav a:hover {
 .page-title {
   font-size: 80px;
   font-weight: 900;
-  color: #1b5e3f;
+  color: var(--accent);
   margin: 40px 0 20px 0;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -63,7 +72,7 @@ nav a:hover {
 .hero-text h1 {
   font-size: 80px;
   font-weight: 900;
-  color: #0050c8;
+  color: var(--accent);
   margin: 40px 0;
 }
 
@@ -75,8 +84,8 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  background: #0050c8;
-  color: white;
+  background: var(--primary);
+  color: #f5f7f4;
   padding: 15px 40px;
   text-decoration: none;
   font-weight: bold;
@@ -122,13 +131,13 @@ nav a:hover {
 .bengineerings-title h1 {
   font-size: 60px;
   font-weight: 900;
-  color: #003366;
+  color: var(--text);
   margin: 20px 0;
   line-height: 1.3;
 }
 
 .bengineerings-title .highlight {
-  color: #0050c8;
+  color: var(--accent);
 }
 
 .bengineerings-cards {
@@ -280,8 +289,8 @@ nav a:hover {
   margin-top: 80px;
   padding: 50px 80px;
 
-  border: 3px solid #1b5e3f;
-  background: #1b5e3f;
+  border: 3px solid var(--accent);
+  background: var(--accent);
 
   /* Square like Canva */
   border-radius: 0px;
@@ -304,7 +313,7 @@ nav a:hover {
 .branding-box h2 {
   font-size: 52px;
   font-weight: 900;
-  color: white;
+  color: #f5f7f4;
   margin: 0;
   letter-spacing: 4px;
 }
@@ -322,7 +331,7 @@ nav a:hover {
 }
 
 .project-card {
-  border: 2px solid #0050c8;
+  border: 2px solid var(--accent);
   width: 240px;
   padding: 20px;
 
@@ -330,7 +339,7 @@ nav a:hover {
   border-radius: 0px;
 
   text-decoration: none;
-  color: #003366;
+  color: var(--text);
 
   transition: 0.25s ease;
 }
@@ -433,7 +442,7 @@ nav a:hover {
 .product-details h2 {
   font-size: 48px;
   font-weight: 900;
-  color: #0050c8;
+  color: var(--accent);
   margin: 20px 0;
 }
 
@@ -451,7 +460,7 @@ nav a:hover {
 }
 
 .product-inquiry {
-  background: #f0f0f0;
+  background: var(--cream-muted);
   padding: 60px 10%;
   display: flex;
   flex-direction: column;
@@ -461,7 +470,7 @@ nav a:hover {
 .product-inquiry h2 {
   font-size: 48px;
   font-weight: 900;
-  color: #0050c8;
+  color: var(--accent);
   margin: 20px 0 10px 0;
 }
 
@@ -498,7 +507,7 @@ nav a:hover {
 .inquiry-form button {
   padding: 15px;
   border: none;
-  background: #0050c8;
+  background: var(--primary);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -541,7 +550,7 @@ nav a:hover {
 .form-section-title {
   font-size: 18px;
   font-weight: 900;
-  color: #0050c8;
+  color: var(--accent);
   margin: 20px 0 10px 0;
   text-align: left;
 }
@@ -559,7 +568,7 @@ nav a:hover {
 .contact-form button {
   padding: 15px;
   border: none;
-  background: #4a2d2d;
+  background: var(--primary);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -572,4 +581,76 @@ nav a:hover {
 
 .contact-form button:hover {
   transform: translateY(-4px);
+}
+
+
+/* ============================= */
+/* PHONE CASES (StudioTheory(2) inspired) */
+/* ============================= */
+
+.phone-hero {
+  padding: 60px 10% 30px;
+  background: var(--bg-cream);
+}
+.phone-hero h2 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: var(--primary);
+  margin: 10px 0 0 0;
+}
+.phone-hero .subtle {
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 30px;
+}
+.top-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+.top-card {
+  width: 320px;
+  height: 200px;
+  background: var(--primary);
+  color: #f5f7f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  padding: 20px;
+}
+.top-card img { display:none; }
+.card-label { font-weight:900; text-transform:uppercase; }
+.card-label .muted { display:block; font-weight:400; margin-top:18px; color: #d9e6db; font-size:13px }
+
+.choose-existing { padding: 60px 10%; }
+.choose-existing h2 { color: var(--accent); }
+.choose-grid { display:flex; gap:40px; align-items:flex-start; justify-content:center; flex-wrap:wrap }
+.sample-images img { width:260px; border-radius:8px }
+.order-form { max-width:520px; width:100%; }
+.order-form .inquiry-form { gap:12px }
+.order-form select, .order-form input { border:1px solid var(--muted-border); padding:10px }
+
+.create-your-own { padding: 60px 10%; }
+.assembly-image { width: 100%; max-width: 1000px; margin: 40px auto; display: block; border-radius: 8px; }
+.create-steps-layout { padding: 40px 0; }
+.create-step { display:flex; gap:40px; align-items:center; justify-content:center; margin-bottom:50px; flex-wrap:wrap }
+.create-step.reverse { flex-direction:row-reverse }
+.create-step img { width:240px; border-radius:6px }
+.step-copy { max-width:500px; text-align:left }
+.step-copy h3 { color:var(--primary); margin-bottom:10px; font-size:20px; text-transform:uppercase }
+.step-copy p { line-height: 1.6; color: var(--text); }
+.create-final { padding:60px 0 40px; text-align:center }
+.create-final h2 { color: var(--primary); margin-bottom:30px; }
+.final-form input, .final-form select { border:1px solid var(--muted-border); padding:12px }
+.final-form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:12px }
+
+.back-button { margin-top:30px }
+
+@media (max-width:900px) {
+  .top-cards { gap:20px; flex-direction:column; align-items:center }
+  .choose-grid { flex-direction:column }
+  .create-step { flex-direction:column }
 }

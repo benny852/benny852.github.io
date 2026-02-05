@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1000" viewBox="0 0 600 1000">
+  <rect width="100%" height="100%" fill="#f3f4ee" rx="24"/>
+  <rect x="36" y="36" width="528" height="928" fill="#062e1f" rx="20"/>
+  <g transform="translate(70,140) scale(0.9)">
+    <text x="0" y="0" font-family="Arial" font-size="42" fill="#f5f7f4">MAKE JESUS</text>
+    <text x="0" y="60" font-family="Arial" font-size="42" fill="#f5f7f4">KNOWN</text>
+  </g>
+</svg>
