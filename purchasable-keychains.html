@@ -13,41 +13,109 @@
     <h1 class="page-title">CUSTOMISED KEY CHAINS</h1>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="purchasable.html">Purchasable Goods</a>
-      <a href="purchasable-keychains.html">Key Chains</a>
-      <a href="bengineerings.html">Bengineerings</a>
-      <a href="purchasable-phones.html">Phone Cases</a>
-      <a href="purchasable-valentines.html">Valentines</a>
-      <a href="purchasable-other.html">Other</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">HOME</a>
+      <a href="purchasable.html">PURCHASABLE GOODS</a>
+      <a href="bengineerings.html">BENGINEERINGS</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
   </header>
 
 
-<section class="product-details">
 
-  <h2>Customised Key Chains</h2>
-  <p>Welcome to the Customised Key Chains collection! Each piece is uniquely crafted to your specifications.</p>
-
-  <div class="product-list">
-    <!-- Add product items here -->
+<!-- Keychains custom layout (StudioTheory(2) inspired) -->
+<section class="phone-hero">
+  <div class="top-cards">
+    <a href="#choose-existing" class="top-card">
+      <div class="card-label">CHOOSE AN EXISTING<br><span class="muted">FROM A RANGE OF OPTIONS</span></div>
+    </a>
+    <a href="#create-your-own" class="top-card">
+      <div class="card-label">CREATE YOUR OWN<br><span class="muted">WITH YOUR OWN GRAPHICS AND WRITING</span></div>
+    </a>
   </div>
-
 </section>
 
-<section class="product-inquiry">
-  <h2>Interested? Get in Touch!</h2>
-  <p>Tell us about your custom key chain idea and we'll help bring it to life.</p>
+<section id="choose-existing" class="choose-existing">
+  <h2>CHOOSE AN EXISTING</h2>
+  <div class="choose-grid">
+    <div class="sample-images">
+      <img src="assets/keychains/red2026.png" alt="Keychain model photo">
+    </div>
+    <div class="order-form">
+      <form class="inquiry-form" action="https://formspree.io/f/xyzpqrst" method="POST">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Phone Number" name="phone">
+        <input type="text" placeholder="Keychain Type/Model" name="model" required>
+        <input type="text" placeholder="What you'd like to write or engrave" name="side_text">
+        <button type="submit" class="btn">CONFIRM</button>
+      </form>
+    </div>
+  </div>
+</section>
 
-  <form class="inquiry-form">
-    <input type="email" placeholder="Email Address" required>
-    <textarea placeholder="Tell us about your custom key chain design, size, material preferences, etc." required></textarea>
-    <button type="submit">Submit Inquiry</button>
-  </form>
+<hr class="section-divider">
 
-  <div class="back-button">
-    <a href="purchasable.html" class="btn">BACK TO PURCHASABLE GOODS</a>
+<section id="create-your-own" class="create-your-own">
+  <h2>CREATE YOUR OWN</h2>
+
+  <div class="create-step-row">
+    <div class="step-content">
+      <div class="step-copy">
+        <h3>STEP ONE.</h3>
+        <p>Draw or find something you’re into!<br>From basketball, to flowers, to a name.</p>
+      </div>
+    </div>
+    <div class="step-images">
+      <img src="assets/keychains/keys-show.png" alt="Keychain design inspiration">
+    </div>
+  </div>
+
+  <div class="create-step-row">
+    <div class="step-content">
+      <div class="step-copy">
+        <h3>STEP TWO.</h3>
+        <p>Upload the image in the highest quality you can. Bonus points if you can upload it as an SVG.</p>
+      </div>
+    </div>
+    <div class="step-images">
+      <img src="assets/keychains/keychain-inspiration.png" alt="Keychain inspiration examples">
+    </div>
+  </div>
+
+  <div class="create-final">
+    <h2>NOW PUT IT ALL TOGETHER.</h2>
+    <div class="final-form-wrapper">
+      <form class="inquiry-form final-form" action="https://formspree.io/f/xyzpqrst" method="POST">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Phone Number" name="phone">
+        <input type="text" placeholder="Keychain Type/Model" name="keychain_model" required>
+        <label class="form-label">Colour Combination</label>
+        <select name="colour" id="colour-select" onchange="toggleOtherColour()">
+          <option value="Red | White Engraving">Red | White Engraving</option>
+          <option value="Black | White Engraving">Black | White Engraving</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" name="other_colour" id="other-colour-input" placeholder="Describe your custom colour/engraving" style="display:none; margin-top:10px;" />
+        <script>
+        function toggleOtherColour() {
+          var select = document.getElementById('colour-select');
+          var input = document.getElementById('other-colour-input');
+          if (select.value === 'Other') {
+            input.style.display = 'block';
+          } else {
+            input.style.display = 'none';
+          }
+        }
+        </script>
+        <label class="form-label">Custom Files</label>
+        <label class="file-label">Image</label>
+        <input type="file" name="image" accept="image/*">
+        <label class="file-label">Text Image</label>
+        <input type="file" name="text_image" accept="image/*">
+        <label class="file-label">Keychain Layout (optional)</label>
+        <input type="file" name="keychain_layout" accept="image/*">
+        <button type="submit" class="btn">CONFIRM</button>
+      </form>
+    </div>
   </div>
 
 </section>
