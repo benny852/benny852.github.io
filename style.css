@@ -948,19 +948,14 @@ html {
 .overview-box {
   width: 270px;
   height: 170px;
-  background: #0050c8;
-  color: white;
-
+  background: var(--accent);
+  color: #fff;
   text-decoration: none;
   padding: 25px;
-
-  /* Square corners */
   border-radius: 0px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   transition: 0.25s ease;
 }
 
