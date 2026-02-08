@@ -1,3 +1,35 @@
+.wide-card {
+  width: 98vw !important;
+  max-width: 1200px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wide-card img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+@media (max-width: 700px) {
+  .small-title {
+    position: static;
+    margin-top: 8px;
+    margin-bottom: 80px;
+    padding-top: 0;
+    width: 100vw;
+    background: transparent;
+  }
+  .page-title {
+    margin-top: 80px !important;
+  }
+}
+.whoami-info-section {
+  padding: 60px 8vw 40px 8vw;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  background: var(--bg-cream);
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
 .bengineerings-cards {
   margin-top: 64px;
 }
@@ -773,6 +805,18 @@ html {
 .small-title {
   font-size: 13px;
   letter-spacing: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0 0 0;
+  z-index: 100;
+  background: transparent;
+}
+body {
+  position: relative;
 }
 
 .hero-content {
