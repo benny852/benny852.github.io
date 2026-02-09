@@ -1,0 +1,13 @@
+/* ...existing code... */
+.small-title {
+  font-size: 13px;
+  letter-spacing: 2px;
+  width: 100vw;
+  text-align: center;
+  margin: 16px 0 40px 0;
+  padding: 0;
+  background: transparent;
+  position: static;
+  z-index: auto;
+}
+/* ...existing code... */
