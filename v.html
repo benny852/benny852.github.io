@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Fredoka', Arial, sans-serif;
+      background: #000;
+    }
+    .v-section {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+    .v-img {
+      position: absolute;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.8) blur(2px) scale(1.04);
+      opacity: 0;
+      transform: scale(1.04) translateY(40px);
+      transition: filter 0.7s cubic-bezier(.4,0,.2,1), opacity 0.7s, transform 0.7s;
+    }
+    .v-section.active .v-img {
+      filter: brightness(0.8) blur(0px) scale(1);
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    .v-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 2;
+      width: 100vw;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 2px 8px #0008;
+      padding: 3vw 4vw 0.5vw 4vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: none;
+      opacity: 0;
+      transform: translateY(-40px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    .v-section.active .v-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .v-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 2vw;
+      margin-bottom: 0.2em;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 2px 8px #0008;
+    }
+    .v-subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.8em;
+      color: #fff;
+      text-shadow: 0 2px 8px #0008;
+    }
+    .v-year {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: none;
+      color: #fff;
+      border-radius: 1em;
+      padding: 0.2em 1.2em;
+      margin-bottom: 0.5em;
+      margin-top: 2vw;
+      display: inline-block;
+      letter-spacing: 2px;
+      box-shadow: none;
+      text-shadow: 0 2px 8px #0008;
+    }
+    @media (max-width: 700px) {
+      .v-title { font-size: 1.3rem; }
+      .v-subtitle { font-size: 1rem; }
+      .v-year { font-size: 1.2rem; }
+      .v-overlay { padding: 6vw 2vw 0.5vw 2vw; }
+    }
+    /* No global fadeIn, handled by JS/CSS above */
+  </style>
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.v-section');
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      }, { threshold: 0.35 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</head>
+<body>
+  <!-- SECTION 1: Main question -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-title">RHYA ANGELINA DOMINGO</div>
+      <div class="v-subtitle">WILL YOU BE MY...</div>
+    </div>
+    <img src="assets/projects/valentines/2.png" alt="Rhya" class="v-img">
+  </section>
+  <!-- SECTION 2: Valentines? -->
+  <section class="v-section">
+    <div class="v-overlay" style="align-items: flex-end; text-align: right; margin-top: 4vw;">
+      <div class="v-title" style="font-size:2.5rem;color:#fff;text-shadow:0 2px 8px #0008; max-width: 60vw; margin-left: auto; margin-right: 6vw;">VALENTINES?</div>
+    </div>
+    <img src="assets/projects/valentines/3.png" alt="Valentines?" class="v-img">
+  </section>
+  <!-- SECTION 3: 2025 -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-year">2025</div>
+    </div>
+    <img src="assets/projects/valentines/4.png" alt="2025" class="v-img">
+  </section>
+  <!-- SECTION 4: 2024 -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-year">2024</div>
+    </div>
+    <img src="assets/projects/valentines/5.png" alt="2024" class="v-img">
+  </section>
+  <!-- SECTION 5: 2023 -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-year">2023</div>
+    </div>
+    <img src="assets/projects/valentines/6.png" alt="2023" class="v-img">
+  </section>
+  <!-- SECTION 6: 2022 -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-year">2022</div>
+    </div>
+    <img src="assets/projects/valentines/7.png" alt="2022" class="v-img">
+  </section>
+  <!-- SECTION 7: 2021 -->
+  <section class="v-section">
+    <div class="v-overlay">
+      <div class="v-year">2021</div>
+    </div>
+    <img src="assets/projects/valentines/8.png" alt="2021" class="v-img">
+  </section>
+  <!-- SECTION 8: 2026 Proposal -->
+  <section class="v-section" id="section-2026">
+    <div class="v-overlay" style="align-items: center; text-align: center; justify-content: center;">
+      <div class="v-title" style="font-size:2.5rem;margin-bottom:2.5rem;">So for 2026?</div>
+      <div style="display:flex; gap:2.5rem; justify-content:center; align-items:center; flex-wrap:wrap;">
+        <a href="yes.html" id="yes-btn" style="font-size:1.5rem;padding:0.7em 2.2em;border-radius:8px;background:#185a3a;color:#fff;font-weight:700;border:2px solid #185a3a;box-shadow:none;cursor:pointer;transition:background 0.2s,transform 0.2s;text-decoration:none;display:inline-block;">YES</a>
+        <button id="no-btn" style="font-size:1.5rem;padding:0.7em 2.2em;border-radius:8px;background:#fff;color:#222;font-weight:700;border:2px solid #222;box-shadow:none;cursor:pointer;position:relative;transition:transform 0.2s;">NO</button>
+      </div>
+    </div>
+    <img src="assets/projects/valentines/2.png" alt="2026" class="v-img" style="filter:brightness(0.7) blur(1px);">
+  </section>
+  <script>
+    // Playful NO button logic
+    const noBtn = document.getElementById('no-btn');
+    if (noBtn) {
+      const moveNoBtn = () => {
+        const parent = noBtn.parentElement;
+        const maxX = parent.offsetWidth - noBtn.offsetWidth - 10;
+        const maxY = 40;
+        const x = Math.random() * maxX * 0.7;
+        const y = (Math.random() - 0.5) * maxY;
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        noBtn.innerText = 'NO';
+      };
+      noBtn.addEventListener('mouseenter', moveNoBtn);
+      noBtn.addEventListener('touchstart', moveNoBtn);
+      noBtn.addEventListener('click', moveNoBtn);
+    }
+    // YES button feedback with fireworks and transition
+    const yesBtn = document.getElementById('yes-btn');
+    if (yesBtn) {
+      yesBtn.addEventListener('click', () => {
+        // Loud transition: flash and scale effect
+        const flash = document.createElement('div');
+        flash.style.position = 'fixed';
+        flash.style.top = 0;
+        flash.style.left = 0;
+        flash.style.width = '100vw';
+        flash.style.height = '100vh';
+        flash.style.background = '#fff';
+        flash.style.zIndex = 9999;
+        flash.style.opacity = 0;
+        flash.style.transition = 'opacity 0.2s';
+        document.body.appendChild(flash);
+        setTimeout(() => {
+          flash.style.opacity = 1;
+        }, 50);
+        setTimeout(() => {
+          flash.style.opacity = 0;
+        }, 350);
+        // Scale effect on body
+        document.body.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)';
+        document.body.style.transform = 'scale(1.15)';
+        setTimeout(() => {
+          document.body.style.transform = 'scale(1)';
+        }, 400);
+        // Transition to yes-result.png after flash
+        setTimeout(() => {
+          // Add fullscreen overlay for yes-result
+          const overlay = document.createElement('div');
+          overlay.style.position = 'fixed';
+          overlay.style.top = 0;
+          overlay.style.left = 0;
+          overlay.style.width = '100vw';
+          overlay.style.height = '100vh';
+          overlay.style.background = '#000';
+          overlay.style.zIndex = 99999;
+          overlay.innerHTML = `
+            <img src='assets/projects/valentines/yes-result.png' alt='YES!' style='width:100vw;height:100vh;object-fit:cover;display:block;'>
+            <button onclick="window.location.reload()" style="position:absolute;bottom:32px;left:32px;background:#fff;border:none;border-radius:50%;width:56px;height:56px;box-shadow:0 2px 12px #0003;cursor:pointer;font-size:2rem;color:#c2185b;display:flex;align-items:center;justify-content:center;z-index:10000;">
+              &#8592;
+            </button>
+          `;
+          document.body.appendChild(overlay);
+        }, 700);
+      });
+    }
+  </script>
+</body>
+</html>

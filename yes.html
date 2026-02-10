@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YES!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      overflow: hidden;
+    }
+    .yes-img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+    .back-btn {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 2px 12px #0003;
+      cursor: pointer;
+      font-size: 2rem;
+      color: #c2185b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: #ffe4ef;
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/projects/valentines/yes-result.png" alt="YES!" class="yes-img">
+  <button class="back-btn" onclick="window.history.back()">&#8592;</button>
+</body>
+</html>

@@ -41,42 +41,14 @@
   max-width: 900px;
   font-weight: normal;
 }
-.whoami-content p {
-  margin: 18px 0;
-}
-.whoami-content .quote {
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 32px;
-}
-.whoami-images-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto 0 auto;
-}
-.whoami-images-bottom {
-  align-items: flex-end;
-  margin-top: 24px;
-}
-.whoami-img {
-  max-width: 320px;
-  height: auto;
-  margin: 0 18px;
-}
-.whoami-img-topleft {
-  align-self: flex-start;
-}
-.whoami-img-topright {
-  align-self: flex-start;
-}
-.whoami-img-bottomleft {
-  align-self: flex-end;
-}
-.whoami-img-bottomright {
-  align-self: flex-end;
+/* .small-title now in normal flow under main title */
+.small-title {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0 0 0;
+  background: transparent;
 }
 nav {
   display: flex;
