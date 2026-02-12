@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+        .section-animate {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .section-animate.active {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      </style>
+    <style>
+      body.fade-in {
+        opacity: 0;
+        transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      }
+      body.fade-in.visible {
+        opacity: 1;
+      }
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Harrison | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<script>
+document.body.classList.add('fade-in');
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => document.body.classList.add('visible'), 50);
+});
+</script>
+
+<header>
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="page-title">BEN HARRISON</h1>
+          <p class="small-title">ENGINEERING PORTFOLIO</p>
+        <div class="hero-vertical-buttons">
+          <a href="#whoami" class="vertical-btn">WHO AM I</a>
+          <a href="#overview" class="vertical-btn">OVERVIEW</a>
+          <a href="#projects" class="vertical-btn">PROJECTS</a>
+        </div>
+      </div>
+      <div class="hero-image"><img src="assets/images/profile-picture.png" alt="Profile Photo" style="border-radius:0; width:340px; height:auto;"></div>
+      </div>
+    </section>
+</header>
+
+<section id="whoami-info" class="whoami-info-section">
+  <div class="section-animate">
+    <h2 class="section-title">WHO AM I</h2>
+    <div class="whoami-content">
+      <p>I am a final-year mechanical and mechatronics student at the University of Technology Sydney.</p>
+      <p>I am extremely passionate about my work, and especially invested in creating innovative solutions through the emergence of mechatronics in Australia.</p>
+      <p>My passions expand beyond engineering, such as artwork and sporting, which I try to intertwine with engineering.</p>
+      <p>And most importantly my faith in God,<br>
+      I believe Jesus is Lord.<br>
+      It is in Him that I find Joy!</p>
+      <p class="quote"><b>Colossians 3:17</b></p>
+    </div>
+    <!-- Images removed for mobile clarity -->
+  </div>
+</section>
+
+<section id="overview" class="overview-section">
+  <div class="section-animate">
+    <h2 class="section-title">OVERVIEW</h2>
+    <div class="overview-grid">
+      <a href="#whoami" class="overview-box"> <h3>WHO AM I</h3> <p>Get to know me and my vision!</p> </a>
+      <a href="#projects" class="overview-box"> <h3>PROJECTS</h3> <p>Some of the cool work I’ve done recently.</p> </a>
+      <a href="#contact" class="overview-box"> <h3>CONTACT</h3> <p>Get in touch with me!</p> </a>
+      <a href="bengineerings.html" class="overview-box bengineerings-box"> <h3>BENGINEERINGS</h3> </a>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section">
+  <div class="section-animate">
+    <h2 class="section-title">PROJECTS</h2>
+    <div class="projects-flex">
+      <a href="university.html" class="project-item project-link">
+        <img src="assets/projects/toaster.png" alt="University Project" style="background:transparent;">
+        <div class="project-label">UNIVERSITY</div>
+      </a>
+      <div class="project-divider"></div>
+      <a href="work.html" class="project-item project-link">
+        <img src="assets/projects/work-setup.png" alt="Work Project" style="background:transparent;">
+        <div class="project-label">WORK</div>
+      </a>
+      <div class="project-divider"></div>
+      <a href="personal.html" class="project-item project-link">
+        <img src="assets/projects/watch.png" alt="Personal Project" style="background:transparent;">
+        <div class="project-label">PERSONAL</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="section-animate">
+    <h2 class="section-title">CONTACT</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Phone Number">
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ben Harrison</p>
+  <script>
+    // Scroll-triggered section animation (up/down, like v.html)
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section-animate');
+      const observer = new window.IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      }, { threshold: 0.15 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</footer>
+
+</body>
+</html>

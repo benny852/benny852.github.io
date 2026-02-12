@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <style>
+        .section-animate {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .section-animate.active {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      </style>
+    <style>
+      body.fade-in {
+        opacity: 0;
+        transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      }
+      body.fade-in.visible {
+        opacity: 1;
+      }
+    </style>
   <meta charset="UTF-8">
   <title>Contact | Ben Harrison</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<script>
+document.body.classList.add('fade-in');
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => document.body.classList.add('visible'), 50);
+});
+</script>
 
 <!-- HEADER -->
   <header>
     <h1 class="page-title">CONTACT ME</h1>
 
     <nav>
-      <a href="home.html">HOME</a>
+      <a href="index.html">HOME</a>
       <a href="overview.html">OVERVIEW</a>
       <a href="bengineerings.html">BENGINEERINGS</a>
       <a href="contact.html">CONTACT</a>
@@ -23,23 +49,36 @@
 
 <section class="contact">
 
-  <form class="contact-form">
-
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Phone Number">
-
-    <select>
-      <option>Collaboration</option>
-      <option>Job Opportunity</option>
-      <option>Other</option>
-    </select>
-
-    <button type="submit">Send Message</button>
-
-  </form>
+  <div class="section-animate">
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Phone Number">
+      <select>
+        <option>Collaboration</option>
+        <option>Job Opportunity</option>
+        <option>Other</option>
+      </select>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 
 </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section-animate');
+      const observer = new window.IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      }, { threshold: 0.15 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </body>
 </html>

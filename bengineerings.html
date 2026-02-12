@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <style>
+        .section-animate {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .section-animate.active {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      </style>
+    <style>
+      body.fade-in {
+        opacity: 0;
+        transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      }
+      body.fade-in.visible {
+        opacity: 1;
+      }
+    </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bengineerings | Ben Harrison</title>
@@ -8,13 +28,19 @@
 </head>
 
 <body>
+<script>
+document.body.classList.add('fade-in');
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => document.body.classList.add('visible'), 50);
+});
+</script>
 
 
 <!-- HEADER -->
 <header>
   <h1 class="page-title">BENGINEERINGS</h1>
   <nav>
-    <a href="home.html">HOME</a>
+    <a href="index.html">HOME</a>
     <a href="overview.html">OVERVIEW</a>
     <a href="bengineerings.html">BENGINEERINGS</a>
     <a href="contact.html">CONTACT</a>
@@ -23,18 +49,20 @@
 
 <section class="bengineerings-cards">
 
-  <div class="projects-flex">
-    <a href="purchasable.html" class="project-item project-link wide-card">
-      <img src="assets/images/purchasable-card.png" alt="Purchasable Goods" style="background:transparent;">
-    </a>
-    <div class="project-divider"></div>
-    <a href="#" class="project-item project-link wide-card">
-      <img src="assets/images/social-card.png" alt="Social Media" style="background:transparent;">
-    </a>
-    <div class="project-divider"></div>
-    <a href="contact.html" class="project-item project-link wide-card">
-      <img src="assets/images/contact-card.png" alt="Contact Me" style="background:transparent;">
-    </a>
+  <div class="section-animate">
+    <div class="projects-flex">
+      <a href="purchasable.html" class="project-item project-link wide-card">
+        <img src="assets/images/purchasable-card.png" alt="Purchasable Goods" style="background:transparent;">
+      </a>
+      <div class="project-divider"></div>
+      <a href="#" class="project-item project-link wide-card">
+        <img src="assets/images/social-card.png" alt="Social Media" style="background:transparent;">
+      </a>
+      <div class="project-divider"></div>
+      <a href="contact.html" class="project-item project-link wide-card">
+        <img src="assets/images/contact-card.png" alt="Contact Me" style="background:transparent;">
+      </a>
+    </div>
   </div>
 
 </section>
@@ -44,6 +72,21 @@
     <img src="assets/logos/logo-bengineerings.png" alt="Bengineerings Logo" style="max-width: 120px; height: auto; display: block; margin: 0 auto 16px auto;">
   </div>
   <p>© 2026 Ben Harrison</p>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section-animate');
+      const observer = new window.IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      }, { threshold: 0.15 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </footer>
 
 </body>

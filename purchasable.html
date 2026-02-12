@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+      body.fade-in {
+        opacity: 0;
+        transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      }
+      body.fade-in.visible {
+        opacity: 1;
+      }
+    </style>
   <meta charset="UTF-8">
   <title>Purchasable Goods | Ben Harrison</title>
   <link rel="stylesheet" href="style.css">
@@ -8,12 +17,18 @@
 </head>
 
 <body>
+<script>
+document.body.classList.add('fade-in');
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => document.body.classList.add('visible'), 50);
+});
+</script>
 
 <!-- HEADER -->
   <header>
     <h1 class="page-title" style="text-align:center;">PURCHASABLE GOODS</h1>
     <nav>
-      <a href="home.html">HOME</a>
+      <a href="index.html">HOME</a>
       <a href="purchasable.html">PURCHASABLE GOODS</a>
       <a href="bengineerings.html">BENGINEERINGS</a>
       <a href="contact.html">CONTACT</a>
