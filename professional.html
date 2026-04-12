@@ -11,16 +11,32 @@
             padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #fffef2;
+            font-size: 1.25em;
         }
         main {
-            max-width: 700px;
-            margin: 56px auto 0 auto;
-            padding: 32px 32px 40px 32px;
+            max-width: 875px;
+            margin: 70px auto 0 auto;
+            padding: 40px 40px 50px 40px;
             background: #fffef2;
-            border-radius: 12px;
-            box-shadow: 0 2px 16px #e0e0e0;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px #e0e0e0;
             position: relative;
             z-index: 1;
+        }
+        h1, h2, h3 {
+            font-size: 1.25em;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.7em;
+        }
+        h3 {
+            font-size: 1.3em;
+        }
+        .about-me-container, .about-row, .about-text, .profile-pic, .outside-video, iframe, .about-row img {
+            font-size: 1em;
         }
         .about-me-container {
             display: flex;
@@ -111,13 +127,15 @@
     </div>
     <header>
         <h1>Professional Portfolio</h1>
-        <nav>
-            <a href="index.html">Engineering Portfolio</a>
-            <!-- <a href="professional.html">Professional</a> -->
+        <nav style="margin: 0 0 2em 0; font-size: 1.1em; text-align: center; font-weight: bold; letter-spacing: 1px;">
+            <a href="#about-me" style="margin:0 1em; color:#14532d; text-decoration:none;">ABOUT ME</a> |
+            <a href="#task-1a-answers" style="margin:0 1em; color:#14532d; text-decoration:none;">INTERNSHIP</a> |
+            <a href="cv.html" style="margin:0 1em; color:#14532d; text-decoration:none;">CV</a> |
+            <a href="cover-letter.html" style="margin:0 1em; color:#14532d; text-decoration:none;">COVER LETTER</a>
         </nav>
     </header>
     <main>
-        <section id="landing">
+        <section id="about-me">
             <h2>About Me</h2>
             <div class="about-me-container">
                 <div class="about-row">
@@ -131,13 +149,6 @@
                 </div>
             </div>
             <div class="outside-images">
-            </div>
-        </section>
-        <section id="cv">
-            <h2>Curriculum Vitae</h2>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <iframe src="assets/Ben Harrison - Resume.pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 12px #eee; max-width: 650px; margin-bottom: 1em;"></iframe>
-                <a href="assets/Ben Harrison - Resume.pdf" download style="color:#1976d2; font-weight:500; text-decoration:underline;">Download Resume (PDF)</a>
             </div>
         </section>
         <section id="task-1a-answers">
@@ -166,11 +177,7 @@ Not only that but the type of work and projects ASE completes excites me, especi
             </div>
         </section>
         <section id="cover-letter">
-            <h2>Cover Letter</h2>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <iframe src="assets/A2 - Application for Graduate Engineer (Mock Cover Letter).pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 12px #eee; max-width: 650px; margin-bottom: 1em;"></iframe>
-                <a href="assets/A2 - Application for Graduate Engineer (Mock Cover Letter).pdf" download style="color:#1976d2; font-weight:500; text-decoration:underline;">Download Cover Letter (PDF)</a>
-            </div>
+            <!-- Cover Letter section removed, now on its own page -->
         </section>
     </main>
     <footer>
