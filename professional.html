@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fffef2;
+        }
+        main {
+            max-width: 700px;
+            margin: 56px auto 0 auto;
+            padding: 32px 32px 40px 32px;
+            background: #fffef2;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+        .about-me-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+        .about-row {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            align-items: flex-start;
+        }
+        .about-text {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+        .profile-pic {
+            width: 180px;
+            aspect-ratio: 9/11;
+            object-fit: contain;
+            border-radius: 16px;
+            margin-left: 1em;
+            background: none;
+            box-shadow: none;
+        }
+        .outside-media-container {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .outside-media-left {
+            left: 110px;
+        }
+        .outside-media-right {
+            right: 110px;
+        }
+        .outside-video {
+            width: 440px;
+            height: 440px;
+            max-width: 48vw;
+            max-height: 48vw;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 22px;
+            display: block;
+            margin-bottom: 56px;
+            box-shadow: none;
+            background: none;
+        }
+        @media (max-width: 900px) {
+            main { padding: 12px 2vw; }
+            .about-row { flex-direction: column; gap: 1em; }
+            .profile-pic { margin: 0 auto 1em auto; display: block; }
+            .outside-images { flex-direction: column; gap: 18px; align-items: center; }
+            .outside-media-container { display: none; }
+        }
+        @media (max-width: 900px) {
+            main { padding: 12px 2vw; }
+            .about-row { flex-direction: column; gap: 1em; }
+            .profile-pic { margin: 0 auto 1em auto; display: block; }
+            .outside-images { flex-direction: column; gap: 18px; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Removed toaster and matthew10 images -->
+    <!-- Embedded project videos on alternating sides -->
+    <div class="outside-media-container outside-media-left" style="top:200px;">
+            <video class="outside-video" src="videos/university/3.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-right" style="top:560px;">
+            <video class="outside-video" src="videos/university/4.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-left" style="top:920px;">
+        <video class="outside-video" src="videos/university/5.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-right" style="top:1280px;">
+        <video class="outside-video" src="videos/university/6.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-left" style="top:1640px;">
+        <video class="outside-video" src="videos/university/7.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-right" style="top:2000px;">
+        <video class="outside-video" src="videos/university/8.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="outside-media-container outside-media-left" style="top:2360px;">
+        <video class="outside-video" src="videos/university/9.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <header>
+        <h1>Professional Portfolio</h1>
+        <nav>
+            <a href="index.html">Engineering Portfolio</a>
+            <!-- <a href="professional.html">Professional</a> -->
+        </nav>
+    </header>
+    <main>
+        <section id="landing">
+            <h2>About Me</h2>
+            <div class="about-me-container">
+                <div class="about-row">
+                    <div class="about-text">
+                        <p>I am a final-year Mechanical and Mechatronics student at the University of Technology Sydney. I’m highly versed through work experience and multiple projects and am extremely passionate about creating innovative solutions through the emergence of robotics and embedded systems. My main two goals are to improve way of life conditions especially for the disadvantaged, and to revolutionise existing systems in manufacturing and design.</p>
+                        <p>During my time studying, I’ve been blessed to work in two engineering environments, one of them in at a small electronics design and manufacturing company, and the other at a biomechanical startup. At both I’ve seen the importance of culture and motivations, along with the high-end results and customer satisfaction their work brings.</p>
+                        <p>A non-negotiable in my career is my faith in Jesus Christ, to glorify Him through my work means that my motivations stay aligned. I’ve began a social-media profile to showcase the exciting engineering work I do whilst keeping it pure. <br><br>
+                        <strong>Colossians 3:17</strong><br>
+                    </div>
+                    <img src="assets/images/profile-picture.png" alt="Profile Picture" class="profile-pic">
+                </div>
+            </div>
+            <div class="outside-images">
+            </div>
+        </section>
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe src="assets/Ben Harrison - Resume.pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 12px #eee; max-width: 650px; margin-bottom: 1em;"></iframe>
+                <a href="assets/Ben Harrison - Resume.pdf" download style="color:#1976d2; font-weight:500; text-decoration:underline;">Download Resume (PDF)</a>
+            </div>
+        </section>
+        <section id="task-1a-answers">
+            <h2>Internship Reflection</h2>
+            <div style="margin-bottom: 1.5em; min-height: 200px;">
+                <img src="assets/images/all systems me.jpeg" alt="Internship at All-Systems" style="width:180px; max-width:40vw; border-radius:12px; box-shadow:0 2px 12px #ccc; float:left; margin: 0 2em 1em 0;">
+                <div>
+<p><strong>What were your expectations about your internship before you joined?</strong><br>
+Before starting at All-Systems, I was quite nervous as to how different the work-environment would be compared to previous experience, and I honestly expected a stagnant culture which punished mistakes. I was afraid to fall into the intern stereotype, where all the intern does is mess up, waste time and create problems.</p>
+
+<p><strong>What was the reality? How was it different from your expectations?</strong><br>
+The reality was that All-Systems Electronics, housed an incredible environment especially for interns to grow and begin their engineering careers. The workplace not only trained me, but my manager Kevin, would mentor and check in, the other workers were all supportive and great to talk with, and my expectations from what an engineering workplace would look like was flipped.<br>
+Not only was the workplace great to work and talk with, but all kinds of workers would dedicate time to help teach and train me. Production workers would give me tips and tricks; whilst other design engineers would answer my questions and review my personal projects and work. It was an environment that made it easy to grow.</p>
+
+<p><strong>What lessons were the most important from your internship. Why were they important?</strong><br>
+I quickly learnt that it is okay to be unsure, and an even greater thing to be curious. When unsure, it’s important to ask rather than stay quiet so you don’t “bother” other works. As it is much better to learn the right way from the beginning, rather than practice poor technique, design ineffectively or even waste materials and time out of fear of asking.<br>
+The other trait, to be curious. Curiosity is a great trait, especially when beginning your career, you should be deeply thinking about all the work you do and never settle with a “it’s just how they’ve always done it” mentality. Curiosity is rewarded with deeper learning, and in the long-term, greater results.</p>
+
+<p><strong>After your workplace experience, what would you say your value proposition would be to an employer? How can you demonstrate this?</strong><br>
+I’d argue my value proposition and impact stem from my attention to detail, time & task management, cultural fit and deeper design capabilities. I’ve demonstrated attention to detail through thorough IPC-A-610 training, time management by accounting and completing series of tasks each day during workplace, cultural fit as I’ve loved my time working with the team and am committed to deeper work culture, and deeper design capabilities through the understanding of production and manufacturing along with deeper projects embedded during my time working.</p>
+
+<p><strong>How did your internship influence the type of role in which you are interested?</strong><br>
+My internship has sparked deeper interest towards designing engineering roles, however ones with room to adjust and assist in production and manufacturing. Working with a smaller team showed me how designing engineers better their craft by working alongside the manufacturing processes.<br>
+Not only that but the type of work and projects ASE completes excites me, especially to work in creating solutions through the emergence of mechatronics, to better people. Some of the projects they’ve worked on range from hospital gas detection systems to car-turbo systems, to custom Turkish Coffee makers and much more! I’d love to build a resume of projects and work that can deeply benefit people and manufacturing, whether it’s for a passion project like the Turkish Coffee Maker, or deeper projects like my Capstone to address the problem of Runners Knee.</p>
+                </div>
+            </div>
+        </section>
+        <section id="cover-letter">
+            <h2>Cover Letter</h2>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe src="assets/A2 - Application for Graduate Engineer (Mock Cover Letter).pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 12px #eee; max-width: 650px; margin-bottom: 1em;"></iframe>
+                <a href="assets/A2 - Application for Graduate Engineer (Mock Cover Letter).pdf" download style="color:#1976d2; font-weight:500; text-decoration:underline;">Download Cover Letter (PDF)</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ben Harrison. 
+            Professional Experience Review</p>
+    </footer>
+</body>
+</html>
