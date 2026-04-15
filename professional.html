@@ -14,7 +14,7 @@
             font-size: 1.25em;
         }
         main {
-            max-width: 875px;
+            max-width: 600px;
             margin: 70px auto 0 auto;
             padding: 40px 40px 50px 40px;
             background: #fffef2;
@@ -44,14 +44,10 @@
             gap: 1.5em;
         }
         .about-row {
-            display: flex;
-            flex-direction: row;
-            gap: 2em;
-            align-items: flex-start;
+            /* Removed flex layout to allow text wrapping */
         }
         .about-text {
-            flex: 1 1 0;
-            min-width: 0;
+            /* Removed flex properties */
         }
         .profile-pic {
             width: 180px;
@@ -61,6 +57,8 @@
             margin-left: 1em;
             background: none;
             box-shadow: none;
+            float: left;
+            margin: 0 2em 1em 0;
         }
         .outside-media-container {
             position: absolute;
@@ -68,16 +66,16 @@
             pointer-events: none;
         }
         .outside-media-left {
-            left: 110px;
+            left: 50px;
         }
         .outside-media-right {
-            right: 110px;
+            right: 50px;
         }
         .outside-video {
-            width: 440px;
-            height: 440px;
-            max-width: 48vw;
-            max-height: 48vw;
+            width: 350px;
+            height: 350px;
+            max-width: 35vw;
+            max-height: 35vw;
             object-fit: cover;
             object-position: center center;
             border-radius: 22px;
@@ -88,16 +86,10 @@
         }
         @media (max-width: 900px) {
             main { padding: 12px 2vw; }
-            .about-row { flex-direction: column; gap: 1em; }
-            .profile-pic { margin: 0 auto 1em auto; display: block; }
+            .about-row { /* flex-direction removed */ }
+            .profile-pic { float: none; margin: 0 auto 1em auto; display: block; }
             .outside-images { flex-direction: column; gap: 18px; align-items: center; }
             .outside-media-container { display: none; }
-        }
-        @media (max-width: 900px) {
-            main { padding: 12px 2vw; }
-            .about-row { flex-direction: column; gap: 1em; }
-            .profile-pic { margin: 0 auto 1em auto; display: block; }
-            .outside-images { flex-direction: column; gap: 18px; align-items: center; }
         }
     </style>
 </head>
@@ -140,12 +132,12 @@
             <div class="about-me-container">
                 <div class="about-row">
                     <div class="about-text">
+                        <img src="assets/images/profile-picture.png" alt="Profile Picture" class="profile-pic">
                         <p>I am a final-year Mechanical and Mechatronics student at the University of Technology Sydney. I’m highly versed through work experience and multiple projects and am extremely passionate about creating innovative solutions through the emergence of robotics and embedded systems. My main two goals are to improve way of life conditions especially for the disadvantaged, and to revolutionise existing systems in manufacturing and design.</p>
                         <p>During my time studying, I’ve been blessed to work in two engineering environments, one of them in at a small electronics design and manufacturing company, and the other at a biomechanical startup. At both I’ve seen the importance of culture and motivations, along with the high-end results and customer satisfaction their work brings.</p>
                         <p>A non-negotiable in my career is my faith in Jesus Christ, to glorify Him through my work means that my motivations stay aligned. I’ve began a social-media profile to showcase the exciting engineering work I do whilst keeping it pure. <br><br>
                         <strong>Colossians 3:17</strong><br>
                     </div>
-                    <img src="assets/images/profile-picture.png" alt="Profile Picture" class="profile-pic">
                 </div>
             </div>
             <div class="outside-images">
