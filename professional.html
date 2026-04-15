@@ -84,6 +84,17 @@
             box-shadow: none;
             background: none;
         }
+        @media (min-width: 1600px) {
+            main {
+                max-width: 1000px;
+            }
+            .outside-video {
+                width: 500px;
+                height: 500px;
+                max-width: 40vw;
+                max-height: 40vw;
+            }
+        }
         @media (max-width: 900px) {
             main { padding: 12px 2vw; }
             .about-row { /* flex-direction removed */ }
