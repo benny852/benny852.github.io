@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  var largeScreenCss = document.createElement('link');
+  largeScreenCss.rel = 'stylesheet';
+  largeScreenCss.href = 'css/large-screen.css';
+  document.head.appendChild(largeScreenCss);
+
   var SHOP_PAGES = [
     'purchasable.html',
     'purchasable-keychains.html',

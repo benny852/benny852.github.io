@@ -1,0 +1,399 @@
+/* ============================= */
+/* LARGE / 4K DISPLAY SCALING    */
+/* Phones & laptops unchanged    */
+/* ============================= */
+
+@media (min-width: 2200px) {
+  :root {
+    --content-max-width: 1520px;
+    --site-nav-height: 4rem;
+    --large-video-scale: 1.12;
+  }
+
+  .site-nav-inner {
+    max-width: var(--content-max-width);
+  }
+
+  .site-nav-brand {
+    font-size: 1.05rem;
+  }
+
+  .site-nav-links a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  body.has-site-nav > header > .page-title,
+  .page-title {
+    font-size: clamp(3.5rem, 3.2vw, 4.75rem) !important;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 2.2vw, 2.75rem);
+  }
+
+  /* --- Home --- */
+  #home.hero-section {
+    max-width: var(--content-max-width);
+  }
+
+  #home .hero-content {
+    max-width: min(1180px, 92vw) !important;
+    gap: clamp(3rem, 4vw, 5.5rem) !important;
+  }
+
+  #home .hero-text {
+    flex: 0 1 520px !important;
+    min-width: 380px !important;
+    max-width: 520px !important;
+  }
+
+  #home .page-title {
+    font-size: clamp(3.25rem, 4vw, 5rem) !important;
+  }
+
+  #home .hero-image {
+    max-width: 420px !important;
+  }
+
+  #home .hero-profile-img,
+  #home .hero-image img {
+    width: min(420px, 78vw) !important;
+  }
+
+  #home .hero-vertical-buttons {
+    max-width: 380px !important;
+  }
+
+  #home .vertical-btn {
+    font-size: 1.05rem;
+    padding: 1rem 0;
+  }
+
+  .whoami-info-section,
+  .overview-section,
+  .projects-section,
+  .contact-section {
+    max-width: var(--content-max-width);
+  }
+
+  .whoami-info-section .section-animate,
+  .overview-section .section-animate,
+  .projects-section .section-animate,
+  .contact-section .section-animate {
+    max-width: 1100px;
+  }
+
+  .whoami-content,
+  .whoami-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .overview-grid {
+    max-width: 1100px;
+    grid-template-columns: repeat(3, minmax(260px, 320px));
+    gap: 1.75rem;
+  }
+
+  .overview-section .overview-box {
+    max-width: 320px;
+    min-height: 175px;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .overview-section .overview-box h3 {
+    font-size: 1.35rem;
+  }
+
+  #projects .project-item,
+  #projects .project-link {
+    max-width: 340px !important;
+  }
+
+  #projects .project-item img {
+    width: min(260px, 70vw);
+  }
+
+  #projects .project-label {
+    font-size: 1.15rem;
+  }
+
+  .contact-section .contact-vertical-buttons {
+    max-width: 380px;
+  }
+
+  .contact-section .vertical-btn {
+    font-size: 1.05rem;
+    padding: 1rem 0;
+  }
+
+  /* --- University --- */
+  .uni-hub {
+    max-width: var(--content-max-width);
+  }
+
+  .uni-hub-card--overview img {
+    max-height: clamp(280px, 44vh, 620px);
+  }
+
+  .uni-hub-card--robobooth img,
+  .uni-hub-card--donkey img {
+    max-height: clamp(240px, 36vh, 420px);
+  }
+
+  .uni-hub-label {
+    font-size: clamp(0.9rem, 1.6vw, 1.35rem);
+  }
+
+  .hero-intro-text {
+    font-size: clamp(1.5rem, 2.4vw, 3.5rem);
+  }
+
+  .hero-intro-wam {
+    font-size: clamp(1.15rem, 1.8vw, 2.35rem);
+  }
+
+  .hero-intro-video .uni-video {
+    width: clamp(200px, 22vw, 420px);
+  }
+
+  .video-section:not(.hero-intro-section) .uni-video {
+    transform: scale(var(--large-video-scale));
+    transform-origin: center center;
+  }
+
+  .video-section:not(.hero-intro-section) .uni-video.active {
+    transform: scale(var(--large-video-scale));
+  }
+
+  .media-section .uni-media {
+    max-height: calc(100dvh - var(--site-nav-height) - 3rem);
+    max-width: min(92vw, 1600px);
+  }
+
+  /* --- Bengineerings / projects hub --- */
+  .hub-grid {
+    max-width: 1100px;
+    gap: 48px;
+  }
+
+  .hub-card {
+    width: 380px;
+    height: 460px;
+  }
+
+  .hub-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .bengineerings-cards {
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects-flex .wide-card {
+    max-width: var(--content-max-width) !important;
+  }
+}
+
+@media (min-width: 2800px) {
+  :root {
+    --content-max-width: 1840px;
+    --site-nav-height: 4.35rem;
+    --large-video-scale: 1.22;
+  }
+
+  .site-nav-brand {
+    font-size: 1.15rem;
+  }
+
+  .site-nav-links a {
+    font-size: 0.98rem;
+  }
+
+  body.has-site-nav > header > .page-title,
+  .page-title {
+    font-size: clamp(4rem, 3vw, 5.5rem) !important;
+  }
+
+  #home .hero-content {
+    max-width: min(1420px, 90vw) !important;
+    gap: clamp(3.5rem, 4vw, 6.5rem) !important;
+  }
+
+  #home .page-title {
+    font-size: clamp(3.75rem, 3.5vw, 5.75rem) !important;
+  }
+
+  #home .hero-text {
+    flex: 0 1 580px !important;
+    max-width: 580px !important;
+  }
+
+  #home .hero-image {
+    max-width: 480px !important;
+  }
+
+  #home .hero-profile-img,
+  #home .hero-image img {
+    width: min(480px, 78vw) !important;
+  }
+
+  .whoami-info-section .section-animate,
+  .overview-section .section-animate,
+  .projects-section .section-animate,
+  .contact-section .section-animate {
+    max-width: 1280px;
+  }
+
+  .whoami-content,
+  .whoami-content p {
+    font-size: 1.32rem;
+  }
+
+  .overview-grid {
+    max-width: 1280px;
+    grid-template-columns: repeat(3, minmax(300px, 360px));
+  }
+
+  .overview-section .overview-box {
+    max-width: 360px;
+    min-height: 195px;
+  }
+
+  #projects .project-item,
+  #projects .project-link {
+    max-width: 380px !important;
+  }
+
+  #projects .project-item img {
+    width: min(300px, 70vw);
+  }
+
+  .uni-hub-card--overview img {
+    max-height: clamp(320px, 46vh, 720px);
+  }
+
+  .uni-hub-card--robobooth img,
+  .uni-hub-card--donkey img {
+    max-height: clamp(280px, 38vh, 500px);
+  }
+
+  .hero-intro-text {
+    font-size: clamp(1.75rem, 2.2vw, 4rem);
+  }
+
+  .hero-intro-video .uni-video {
+    width: clamp(240px, 20vw, 480px);
+  }
+
+  .hub-card {
+    width: 420px;
+    height: 510px;
+  }
+}
+
+@media (min-width: 3600px) {
+  :root {
+    --content-max-width: 2200px;
+    --site-nav-height: 4.75rem;
+    --large-video-scale: 1.32;
+  }
+
+  .site-nav-brand {
+    font-size: 1.25rem;
+  }
+
+  .site-nav-links a {
+    font-size: 1.05rem;
+    padding: 0.55rem 1.15rem;
+  }
+
+  body.has-site-nav > header > .page-title,
+  .page-title {
+    font-size: clamp(4.5rem, 2.8vw, 6.25rem) !important;
+  }
+
+  #home .hero-content {
+    max-width: min(1680px, 88vw) !important;
+    gap: clamp(4rem, 4vw, 7rem) !important;
+  }
+
+  #home .page-title {
+    font-size: clamp(4.25rem, 3vw, 6.5rem) !important;
+  }
+
+  #home .hero-text {
+    flex: 0 1 640px !important;
+    max-width: 640px !important;
+  }
+
+  #home .hero-image {
+    max-width: 540px !important;
+  }
+
+  #home .hero-profile-img,
+  #home .hero-image img {
+    width: min(540px, 78vw) !important;
+  }
+
+  .whoami-content,
+  .whoami-content p {
+    font-size: 1.45rem;
+  }
+
+  .overview-grid {
+    max-width: 1480px;
+    grid-template-columns: repeat(3, minmax(340px, 400px));
+  }
+
+  .overview-section .overview-box {
+    max-width: 400px;
+    min-height: 210px;
+  }
+
+  #projects .project-item img {
+    width: min(340px, 70vw);
+  }
+
+  .uni-hub {
+    max-width: var(--content-max-width);
+  }
+
+  .uni-hub-card--overview img {
+    max-height: clamp(380px, 48vh, 860px);
+  }
+
+  .uni-hub-card--robobooth img,
+  .uni-hub-card--donkey img {
+    max-height: clamp(320px, 40vh, 580px);
+  }
+
+  .hero-intro-text {
+    font-size: clamp(2rem, 2vw, 4.5rem);
+  }
+
+  .hero-intro-video .uni-video {
+    width: clamp(280px, 18vw, 540px);
+  }
+
+  .hub-card {
+    width: 460px;
+    height: 560px;
+  }
+
+  .media-section .uni-media {
+    max-width: min(90vw, 2000px);
+  }
+}
+
+@media (min-width: 2200px) {
+  @media (prefers-reduced-motion: reduce) {
+    .video-section:not(.hero-intro-section) .uni-video,
+    .video-section:not(.hero-intro-section) .uni-video.active {
+      transform: none;
+    }
+  }
+}
