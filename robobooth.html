@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robo-Booth | University | Ben Harrison</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/university.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body class="university-page robobooth-page">
+
+  <header>
+    <h1 class="page-title">ROBO-BOOTH</h1>
+    <p class="uni-subtitle"><a href="university.html">← Back to University</a></p>
+  </header>
+
+  <main>
+    <div class="media-section media-section--image">
+      <img class="uni-media active" src="videos/university/rs2/robot_samir.png" alt="Robo-Booth with Samir">
+    </div>
+
+    <div class="media-section media-section--video">
+      <video class="uni-media uni-video" src="videos/university/rs2/drawingben.MOV" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="media-section media-section--image">
+      <img class="uni-media" src="videos/university/rs2/ben_drawing.png" alt="Drawing at Robo-Booth">
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var items = document.querySelectorAll('.uni-media');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle('active', entry.isIntersecting);
+        });
+      }, { threshold: 0.2 });
+      items.forEach(function (item) {
+        observer.observe(item);
+        if (item.tagName === 'IMG') {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <script src="js/site-nav.js"></script>
+</body>
+</html>

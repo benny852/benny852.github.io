@@ -22,8 +22,11 @@
       }
     </style>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Ben Harrison</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site-nav.css">
 </head>
 
 <body>
@@ -51,15 +54,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
   <div class="section-animate">
     <div class="project-grid">
-      <a href="projects-university.html" class="project-card">
+      <a href="university.html" class="project-card">
         <img src="assets/images/university-card.png" alt="University">
         <h3>UNIVERSITY</h3>
       </a>
-      <a href="projects-work.html" class="project-card">
+      <a href="work.html" class="project-card">
         <img src="assets/images/work-card.png" alt="Work">
         <h3>WORK</h3>
       </a>
-      <a href="projects-personal.html" class="project-card">
+      <a href="personal.html" class="project-card">
         <img src="assets/images/personal-card.png" alt="Personal">
         <h3>PERSONAL</h3>
       </a>
@@ -83,5 +86,6 @@ window.addEventListener('DOMContentLoaded', function() {
       sections.forEach(section => observer.observe(section));
     });
   </script>
+  <script src="js/site-nav.js"></script>
 </body>
 </html>

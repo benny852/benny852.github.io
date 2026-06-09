@@ -22,8 +22,12 @@
       }
     </style>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Ben Harrison</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -47,22 +51,15 @@ window.addEventListener('DOMContentLoaded', function() {
   </header>
 
 
-<section class="contact">
-
+<section class="contact contact-section">
   <div class="section-animate">
-        <form class="inquiry-form" action="https://formspree.io/f/mqedpgob" method="POST">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="text" placeholder="Phone Number">
-      <select>
-        <option>Collaboration</option>
-        <option>Job Opportunity</option>
-        <option>Other</option>
-      </select>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="hero-vertical-buttons contact-vertical-buttons">
+      <a href="mailto:benharrison1001@gmail.com" class="vertical-btn">EMAIL</a>
+      <a href="https://www.linkedin.com/in/ben-harrison11/" class="vertical-btn btn-linkedin" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+      <a href="https://www.instagram.com/bengineerings" class="vertical-btn btn-instagram" target="_blank" rel="noopener noreferrer">BENGINEERINGS</a>
+      <a href="https://www.youtube.com/@bengineerings" class="vertical-btn btn-youtube" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+    </div>
   </div>
-
 </section>
 
   <script>
@@ -80,5 +77,6 @@ window.addEventListener('DOMContentLoaded', function() {
       sections.forEach(section => observer.observe(section));
     });
   </script>
+  <script src="js/site-nav.js"></script>
 </body>
 </html>

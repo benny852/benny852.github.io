@@ -5,113 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Projects | Ben Harrison</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/university.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #fffef2;
-      color: #111;
-      overflow-x: hidden;
-    }
-    .video-section {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fffef2;
-      position: relative;
-      overflow: hidden;
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-    }
-    .uni-video {
-      /* ...existing styles... */
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-    }
-    .uni-video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-      background: transparent;
-      border: none;
-      margin: 0;
-      padding: 0;
-      opacity: 0;
-      transform: translateY(40px) scale(0.98);
-      transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
-    }
-    /* Only apply contain to videos 2-9 on desktop */
-    .video-section:not(:first-of-type) .uni-video {
-      object-fit: contain;
-    }
-    @media (max-width: 900px) {
-      .video-section:not(:first-of-type) .uni-video {
-        width: 100vw !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        background: #fffef2 !important;
-        display: block;
-      }
-      .video-section:not(:first-of-type) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        height: 100vh;
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-    }
-    @media (max-width: 900px) {
-      .uni-video {
-        object-position: center center;
-      }
-    }
-    .uni-video.active {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  </style>
 </head>
-<body>
-  <!-- HEADER -->
+<body class="university-page">
+
   <header>
-    <h1 class="page-title" style="text-align:center;">UNIVERSITY</h1>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="overview.html">OVERVIEW</a>
-      <a href="bengineerings.html">BENGINEERINGS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
+    <h1 class="page-title">UNIVERSITY</h1>
   </header>
-  <main>
-    <div class="video-section" style="display: flex; align-items: center; justify-content: center; gap: 2vw;">
-      <div style="flex:1; display:flex; justify-content:flex-end;">
-        <div style="color:#004aad; font-weight: 900; font-family: 'Inter', Arial, sans-serif; font-size:3.6vw; text-align:right; line-height:1.1; letter-spacing:-1px;">
-          FINAL<br>YEAR<br>STUDENT
-        </div>
+
+  <section class="uni-hub" aria-label="University project areas">
+    <div class="uni-hub-grid">
+      <a href="#university-overview" class="uni-hub-card uni-hub-card--wide uni-hub-card--overview" aria-label="Overview">
+        <img src="videos/university/overviewboys.png" alt="">
+        <span class="uni-hub-label">OVERVIEW</span>
+      </a>
+      <a href="robobooth.html" class="uni-hub-card uni-hub-card--robobooth" aria-label="Robo-Booth">
+        <img src="videos/university/rs2/robot_samir.png" alt="">
+        <span class="uni-hub-label">ROBO-BOOTH</span>
+      </a>
+      <a href="university-donkey-kong.html" class="uni-hub-card uni-hub-card--donkey" aria-label="Teaching an agent to play Donkey Kong">
+        <img src="videos/university/donkeykong/donkeykong.gif" alt="">
+        <span class="uni-hub-label">TEACHING AN AGENT TO PLAY DONKEY KONG</span>
+      </a>
+    </div>
+  </section>
+
+  <main id="university-overview">
+    <div class="video-section hero-intro-section">
+      <div class="hero-intro-text hero-intro-text--left">
+        FINAL<br>YEAR<br>STUDENT
       </div>
-      <div style="flex:1; display:flex; justify-content:center; align-items:center;">
-        <video class="uni-video" src="videos/university/watch-rework.mp4" autoplay loop muted playsinline style="width:28vw; height:80vh; border-radius:0; box-shadow:0 4px 32px #0002; background:transparent;"></video>
+      <div class="hero-intro-video">
+        <video class="uni-video" src="videos/university/watch-rework.mp4" autoplay loop muted playsinline></video>
       </div>
-      <div style="flex:1; display:flex; justify-content:flex-start;">
-        <div style="color:#004aad; font-weight: 900; font-family: 'Inter', Arial, sans-serif; font-size:3.6vw; text-align:left; line-height:1.1; letter-spacing:-1px;">
-          MECHANICAL<br><br>AND<br><br>MECHATRONICS<br><br><span style="font-size:2.5vw; color:#004aad; font-weight:900; font-family:'Inter',Arial,sans-serif;">75+ WAM</span>
+      <div class="hero-intro-text hero-intro-text--right">
+        <div class="hero-intro-major">
+          MECHANICAL<br>AND<br>MECHATRONICS
         </div>
+        <span class="hero-intro-wam">75+ WAM</span>
       </div>
     </div>
+
     <div class="video-section">
       <video class="uni-video" src="videos/university/2.mp4" autoplay loop muted playsinline></video>
     </div>
@@ -137,20 +74,20 @@
       <video class="uni-video" src="videos/university/9.mp4" autoplay loop muted playsinline></video>
     </div>
   </main>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const videos = document.querySelectorAll('.uni-video');
-      const observer = new window.IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          } else {
-            entry.target.classList.remove('active');
-          }
+    document.addEventListener('DOMContentLoaded', function () {
+      var videos = document.querySelectorAll('.uni-video');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle('active', entry.isIntersecting);
         });
-      }, { threshold: 0.25 });
-      videos.forEach(video => observer.observe(video));
+      }, { threshold: 0.2 });
+      videos.forEach(function (video) {
+        observer.observe(video);
+      });
     });
   </script>
+  <script src="js/site-nav.js"></script>
 </body>
 </html>

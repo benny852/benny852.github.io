@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Preview | Ben Harrison</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site-nav.css">
+  <style>
+    .preview-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    .preview-page h1 {
+      text-align: center;
+      color: var(--accent, #1b5e3f);
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-page p {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .preview-group {
+      margin-bottom: 2rem;
+    }
+
+    .preview-group h2 {
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary, #0b3a2a);
+      margin-bottom: 0.75rem;
+    }
+
+    .preview-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 0.75rem;
+    }
+
+    .preview-links a {
+      display: block;
+      padding: 0.9rem 1rem;
+      border-radius: 0.75rem;
+      background: #fff;
+      border: 1px solid #cfd8d1;
+      color: var(--accent, #1b5e3f);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .preview-links a:hover {
+      background: rgba(27, 94, 63, 0.06);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-page">
+    <h1>Site Preview</h1>
+    <p>Quick links to every page — use this to review the full site on phone or laptop.</p>
+
+    <section class="preview-group">
+      <h2>Main</h2>
+      <div class="preview-links">
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="contact.html">Contact</a>
+        <a href="projects.html">Projects Hub</a>
+      </div>
+    </section>
+
+    <section class="preview-group">
+      <h2>Projects</h2>
+      <div class="preview-links">
+        <a href="university.html">University</a>
+        <a href="robobooth.html">Robo-Booth</a>
+        <a href="university-donkey-kong.html">Donkey Kong Agent</a>
+        <a href="work.html">Work</a>
+        <a href="personal.html">Personal</a>
+      </div>
+    </section>
+
+    <section class="preview-group">
+      <h2>Bengineerings &amp; Shop</h2>
+      <div class="preview-links">
+        <a href="bengineerings.html">Bengineerings</a>
+        <a href="purchasable.html">Purchasable Goods</a>
+        <a href="purchasable-keychains.html">Key Chains</a>
+        <a href="purchasable-phones.html">Phone Cases</a>
+        <a href="purchasable-valentines.html">Valentines</a>
+        <a href="purchasable-other.html">Other</a>
+      </div>
+    </section>
+
+    <section class="preview-group">
+      <h2>Professional</h2>
+      <div class="preview-links">
+        <a href="professional.html">Professional</a>
+        <a href="cv.html">CV</a>
+        <a href="cover-letter.html">Cover Letter</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/site-nav.js"></script>
+</body>
+</html>
