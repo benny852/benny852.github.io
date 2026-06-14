@@ -6,6 +6,11 @@
   largeScreenCss.href = 'css/large-screen.css';
   document.head.appendChild(largeScreenCss);
 
+  var mobileFixesCss = document.createElement('link');
+  mobileFixesCss.rel = 'stylesheet';
+  mobileFixesCss.href = 'css/mobile-fixes.css';
+  document.head.appendChild(mobileFixesCss);
+
   var SHOP_PAGES = [
     'purchasable.html',
     'purchasable-keychains.html',

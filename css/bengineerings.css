@@ -1,0 +1,130 @@
+/* Bengineerings hub page */
+
+body.bengineerings-page {
+  background: #fffef2;
+  overflow-x: hidden;
+}
+
+body.bengineerings-page header {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body.bengineerings-page .page-title {
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.bengineerings-cards {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+}
+
+.bengineerings-cards .projects-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 0;
+}
+
+.bengineerings-cards .project-item,
+.bengineerings-cards .project-link,
+.bengineerings-cards .wide-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: min(520px, 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.bengineerings-cards .wide-card img,
+.bengineerings-cards .project-item img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: contain !important;
+}
+
+.bengineerings-cards .project-divider {
+  width: 80px;
+  height: 2px;
+  margin: 1.25rem auto;
+  align-self: center;
+  background: var(--accent, #1b5e3f);
+  opacity: 0.25;
+}
+
+body.bengineerings-page footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem 5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body.bengineerings-page header {
+    padding-left: clamp(1rem, 4vw, 1.25rem) !important;
+    padding-right: clamp(1rem, 4vw, 1.25rem) !important;
+  }
+
+  body.bengineerings-page .page-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem) !important;
+    line-height: 1.15 !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .bengineerings-cards {
+    margin-top: 2rem;
+    padding-left: clamp(1rem, 4vw, 1.25rem);
+    padding-right: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  .bengineerings-cards .projects-flex {
+    max-width: min(360px, 100%);
+  }
+
+  .bengineerings-cards .project-item,
+  .bengineerings-cards .project-link,
+  .bengineerings-cards .wide-card {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .bengineerings-cards .wide-card img,
+  .bengineerings-cards .project-item img {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .bengineerings-cards .projects-flex {
+    max-width: min(320px, 92vw);
+  }
+}

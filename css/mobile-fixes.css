@@ -1,0 +1,291 @@
+/* ============================= */
+/* SITE-WIDE MOBILE CENTERING    */
+/* Fixes legacy style.css 100vw  */
+/* ============================= */
+
+@media (max-width: 768px) {
+  body.has-site-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden;
+  }
+
+  body.has-site-nav > header {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-left: clamp(1rem, 4vw, 1.25rem) !important;
+    padding-right: clamp(1rem, 4vw, 1.25rem) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav > header > .page-title,
+  body.has-site-nav > header .page-title,
+  body.has-site-nav .small-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.has-site-nav > header > .page-title {
+    margin-top: 1.5rem !important;
+  }
+
+  body.has-site-nav > section,
+  body.has-site-nav > main,
+  body.has-site-nav > footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- Wide cards & project rows (Bengineerings, Projects) --- */
+  body.has-site-nav .projects-flex,
+  body.has-site-nav .projects-thumb {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: min(520px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 0 !important;
+  }
+
+  body.has-site-nav .project-item,
+  body.has-site-nav .project-link,
+  body.has-site-nav .wide-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: min(520px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .wide-card img,
+  body.has-site-nav .project-item img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    object-fit: contain !important;
+  }
+
+  body.has-site-nav .project-divider {
+    width: 80px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+  }
+
+  /* --- Purchasable goods hub --- */
+  body.has-site-nav .purchasable-goods-main {
+    width: 100% !important;
+    max-width: min(520px, 100%) !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(1rem, 4vw, 1.25rem) !important;
+    padding-right: clamp(1rem, 4vw, 1.25rem) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .purchasable-goods-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 1.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.has-site-nav .purchasable-goods-item {
+    width: 100% !important;
+    max-width: min(320px, 100%) !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  body.has-site-nav .purchasable-goods-img {
+    width: auto !important;
+    max-width: min(280px, 80vw) !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  body.has-site-nav .purchasable-goods-label {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* --- Phone cases / keychains / shop subpages --- */
+  body.has-site-nav .phone-hero,
+  body.has-site-nav .choose-existing,
+  body.has-site-nav .create-your-own,
+  body.has-site-nav .create-final {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: clamp(1rem, 4vw, 1.25rem) !important;
+    padding-right: clamp(1rem, 4vw, 1.25rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .choose-existing h2,
+  body.has-site-nav .create-your-own h2,
+  body.has-site-nav .phone-hero h2 {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  body.has-site-nav .top-cards,
+  body.has-site-nav .tight-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: min(400px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 1rem !important;
+  }
+
+  body.has-site-nav .top-card,
+  body.has-site-nav .tight-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 160px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .choose-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: min(400px, 100%) !important;
+    gap: 1.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+  }
+
+  body.has-site-nav .sample-images,
+  body.has-site-nav .order-form,
+  body.has-site-nav .final-form-wrapper {
+    width: 100% !important;
+    max-width: min(360px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex: none !important;
+  }
+
+  body.has-site-nav .sample-images img,
+  body.has-site-nav .step-images img {
+    width: 100% !important;
+    max-width: min(320px, 88vw) !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  body.has-site-nav .inquiry-form {
+    width: 100% !important;
+    max-width: min(360px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .inquiry-form input,
+  body.has-site-nav .inquiry-form textarea,
+  body.has-site-nav .inquiry-form select,
+  body.has-site-nav .inquiry-form button,
+  body.has-site-nav .order-form input,
+  body.has-site-nav .order-form select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  body.has-site-nav .btn {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  /* --- Hub grids --- */
+  body.has-site-nav .hub-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: min(520px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.has-site-nav .hub-card {
+    width: 100% !important;
+    max-width: min(340px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* --- Contact --- */
+  body.has-site-nav .contact-form {
+    width: 100% !important;
+    max-width: min(360px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.has-site-nav .contact-form input,
+  body.has-site-nav .contact-form button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.has-site-nav .top-card,
+  body.has-site-nav .tight-card {
+    min-height: 140px !important;
+  }
+
+  body.has-site-nav .purchasable-goods-img {
+    max-width: min(240px, 72vw) !important;
+  }
+}
