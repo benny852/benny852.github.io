@@ -51,6 +51,9 @@
     if (page === 'bengineerings.html') {
       return 'bengineerings';
     }
+    if (page === 'social-media.html') {
+      return 'bengineerings';
+    }
     if (SHOP_PAGES.indexOf(page) !== -1) {
       return 'shop';
     }
